@@ -1,9 +1,8 @@
 const express = require("express");
+const { createUser } = require("../controllers/user.controller");
 
 const router = express.Router();
 
-router.post("/register", (req, res) =>
-    res.send("Este es el endpoint de registro")
-);
+router.post("/register", createUser);
 
 module.exports = router;
